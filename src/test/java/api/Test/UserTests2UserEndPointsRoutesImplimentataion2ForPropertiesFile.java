@@ -126,5 +126,16 @@ public class UserTests2UserEndPointsRoutesImplimentataion2ForPropertiesFile {
 		logger.info("===========  User deleted==================");
 
 	}
+	@Test(priority = 4)
+	public void testDeleteUserByName2() {
+		
+		
+		logger.info("=========== Deleting User==================");
+		
+		Response response = UserEndPointsRoutesImplimentataion2ForPropertiesFile.DeleteUser(this.userPaylod.getUsername());
+		AssertJUnit.assertEquals(response.getStatusCode(),404);
+		logger.info("===========  User deleted==================");
+		
+	}
 
 }
